@@ -36,6 +36,7 @@ body {
     overflow-x: hidden;
     background-color: var(--fondoprincipal);
     color: var(--textoprincipal);
+    cursor: default;
 }
 #nether-background {
     position: fixed;

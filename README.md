@@ -62,7 +62,7 @@ El sitio cuenta con diferentes secciones orientadas a presentar mi perfil profes
 ### Bases de datos
 
 * PostgreSQL
-* MySQL
+* MongoDB
 
 ### Herramientas y conceptos
 
@@ -145,25 +145,23 @@ Plataforma web desarrollada para representar un colectivo gastronómico local y 
 
 ### 📋 Thyra — Planificador de tareas
 
-Aplicación web para la gestión y organización de tareas personales.
+Aplicación web para la gestión y organización de tareas personales, con un backend desarrollado en Java y Spring Boot que expone una API REST y persiste la información en PostgreSQL(supabase).
 
 **Características principales:**
 
-* Creación de tareas.
-* Categorización.
-* Asignación de prioridades.
-* Fechas límite.
-* Estados de tarea:
+* Creación y consulta de tareas.
+* Actualización y eliminación de tareas.
+* Organización por categoría y prioridad.
+* Registro de descripción, fecha de inicio y fecha límite.
+* Gestión del estado y la finalización de cada tarea.
+* Validación de los datos recibidos mediante Bean Validation.
+* Persistencia de información mediante Spring Data JPA.
+* Configuración de CORS para la comunicación con el frontend.
 
-  * Por hacer
-  * En progreso
-  * Completada
-* Persistencia de información mediante `localStorage`.
-* Modal para consultar el detalle de cada tarea.
+**Tecnologías:** Java · Spring Boot · Spring Web MVC · Spring Data JPA · PostgreSQL(supabase) · Bean Validation · Lombok · Maven
 
-**Tecnologías:** HTML5 · CSS3 · JavaScript ES6+
-
-🔗 [Repositorio](https://github.com/SneyderRodriguez/Planificador-Tareas.github.io.git)
+🔗 [Repositorio Backend](https://github.com/sneyderrodriguez/Thyra-Backend)
+🔗 [Repositorio Frontend](https://github.com/SneyderRodriguez/Planificador-Tareas.github.io.git)
 🌐 [Demo](https://thyratask.netlify.app/)
 
 ---
@@ -191,23 +189,25 @@ El objetivo del proyecto es trabajar con autenticación y consumo de informació
 
 ### 🐶 HuellaVet
 
-Plataforma web para la gestión de citas veterinarias, desarrollada como proyecto colaborativo.
-
-El sistema permite a los propietarios registrar sus mascotas y gestionar citas de acuerdo con la disponibilidad de los veterinarios.
+Sistema de gestión de servicios y citas veterinarias desarrollado como proyecto colaborativo. El backend proporciona una API REST para administrar usuarios, mascotas, veterinarios, servicios y citas, con persistencia en PostgreSQL(supabase).
 
 **Características principales:**
 
-* Registro de propietarios.
-* Gestión de mascotas.
-* Reserva de citas.
-* Disponibilidad de veterinarios.
-* Panel administrativo.
-* Gestión de agenda.
-* Diseño responsive.
+* Autenticación y generación de tokens JWT.
+* Control de acceso según roles de usuario, veterinario y administrador.
+* Registro y consulta de mascotas asociadas a sus propietarios.
+* Gestión de citas, horarios y disponibilidad.
+* Flujo de estados de las citas: pendiente, confirmada, en curso, completada, cancelada, rechazada y reprogramada.
+* Validación de permisos para consultar y modificar información.
+* Gestión de servicios y veterinarios.
+* Registro de información de reservas, abonos y recordatorios.
+* Documentación de la API mediante OpenAPI/Swagger.
+* Configuración de conexión a PostgreSQL mediante variables de entorno.
 
-**Tecnologías:** HTML5 · CSS3 · JavaScript · Spring Boot · MySQL
+**Tecnologías:** Java · Spring Boot · Spring Security · Spring Data JPA · PostgreSQL(supabase) · JWT · Bean Validation · OpenAPI/Swagger · Maven
 
-🔗 [Repositorio](https://github.com/jorgegutierrezvallejo/ProyectoFinalJava13-Grupo6.git)
+🔗 [Repositorio Backend](https://github.com/sneyderrodriguez/HUELLAVET-BACKEND)
+🔗 [Repositorio Frontend](https://github.com/jorgegutierrezvallejo/ProyectoFinalJava13-Grupo6.git)
 🌐 [Demo](https://jorgegutierrezvallejo.github.io/ProyectoFinalJava13-Grupo6/)
 
 ---
